@@ -2,8 +2,8 @@
 :root {
   --color-gray: #b8b8b8;
   --font-main: "Montserrat", sans-serif;
-  --color-dark-gray: #4e4e4e;
-  --color-darker-gray: #2c2c2c;
+  --color-dark-gray: #7e7e7e;
+  --color-darker-gray: #484848;
 }
 
 .custom-navbar {
@@ -19,13 +19,13 @@
   padding-inline: 8px;
 }
 
-.navbar-logo {
+.custom-navbar .navbar-logo {
   width: 135px;
   height: auto;
   object-fit: cover;
 }
 
-.icon-div {
+.custom-navbar .navbar-top .icon-div {
   margin-right: 15px;
   width: 25px;
   height: 25px;
@@ -35,26 +35,26 @@
   margin-block: 8px;
 }
 
-.primary-options {
+.custom-navbar .navbar-top .primary-options {
   margin-block: 25px;
 }
 
-.primary-options i {
+.custom-navbar .navbar-top .primary-options i {
   font-size: 25px;
 }
 
-.custom-navbar a {
+.custom-navbar .navbar-top a {
   text-decoration: none;
   color: var(--color-gray);
 }
 
-.create-playlist-icon {
+.custom-navbar .navbar-top .secondary-options .create-playlist-icon {
   background-color: var(--color-gray);
   color: black;
   border-radius: 2px;
 }
 
-.liked-songs-icon {
+.custom-navbar .navbar-top .secondary-options .liked-songs-icon {
   background: rgb(60, 29, 160);
   background: linear-gradient(
     159deg,
@@ -65,6 +65,52 @@
 }
 
 .divider {
-  background-color: var(--color-darker-gray);
+  background-color: #252525;
   border-width: 0.5px;
+  margin-block: 10px;
+}
+
+.custom-navbar .navbar-bottom {
+  color: var(--color-dark-gray);
+  float: left;
+  width: 100%;
+  overflow-y: auto;
+  max-height: calc(100% - 400px);
+}
+.custom-navbar .navbar-bottom .navbar-playlist {
+  list-style: none;
+}
+
+.custom-navbar .navbar-bottom .navbar-playlist .navbar-playlist-item {
+  margin-block: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.navbar-bottom::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+.navbar-bottom::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+.navbar-bottom::-webkit-scrollbar-thumb {
+  background-color: var(--color-darker-gray); /* color of the scroll thumb */
+  max-height: 50px;
+}
+
+.collaborative-playlist-item {
+  position: relative;
+  padding-right: 20px;
+}
+.collaborative-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  font-size: 15px;
+  width: 15px;
 }
