@@ -7,7 +7,8 @@
 }
 
 .custom-navbar {
-  height: 100vh;
+  position: relative;
+  height: calc(100vh - 90px);
   /* TODO: Calculate height depend on  the bottom of page */
   background-color: black;
   width: 240px;
@@ -25,7 +26,7 @@
   object-fit: cover;
 }
 
-.custom-navbar .navbar-top .icon-div {
+.custom-navbar .icon-div {
   margin-right: 15px;
   width: 25px;
   height: 25px;
@@ -39,8 +40,9 @@
   margin-block: 25px;
 }
 
-.custom-navbar .navbar-top .primary-options i {
-  font-size: 25px;
+.custom-navbar .navbar-top .primary-options i,
+.install-icon {
+  font-size: 23px;
 }
 
 .custom-navbar .navbar-top a {
@@ -71,18 +73,17 @@
 }
 
 .custom-navbar .navbar-bottom {
-  color: var(--color-dark-gray);
   float: left;
   width: 100%;
   overflow-y: auto;
-  max-height: calc(100% - 400px);
+  max-height: calc(100% - 338px);
 }
 .custom-navbar .navbar-bottom .navbar-playlist {
   list-style: none;
 }
 
 .custom-navbar .navbar-bottom .navbar-playlist .navbar-playlist-item {
-  margin-block: 5px;
+  margin-block: 6px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -113,4 +114,19 @@
   top: 0;
   font-size: 15px;
   width: 15px;
+}
+
+.install-app {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  background-color: black;
+  z-index: 999;
+  padding-inline: 8px;
+}
+
+.install-app a {
+  text-decoration: none;
+  color: var(--color-gray);
 }
