@@ -10,7 +10,7 @@ function goBackToHomePage() {
     ".right-container ul li:first-child a"
   );
   goBackButton.addEventListener("click", () => {
-    goBackButton.href = "./homePage.html";
+    goBackButton.href = "./index.html";
   });
 }
 

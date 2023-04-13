@@ -70,7 +70,7 @@ function displayAlbumCard(albumData) {
   );
   const col = document.createElement("div");
   col.classList = "col-6 col-sm-12 col-md-6 col-lg-4";
-  col.innerHTML = `<a class="album-link card-link" href="./albumPage.html?id=${id}">
+  col.innerHTML = `<a class="album-link card-link" href="./albumpage.html?id=${id}">
                       <div class="album-card-horizontal d-flex align-items-center">
                         <div>
                           <img
@@ -108,7 +108,7 @@ function createSingelCardForRecentlyPlayedSection() {
                                     </div>
                                     <div class="mt-3 w-100 d-flex flex-column">
                                       <div class="song-name song-card-vertical-song-name">Master of Puppet</div>
-                                      <a class="artist-link card-link" href="./artistPage.html">
+                                      <a class="artist-link card-link" href="./artistpage.html">
                                         <div class="artist-name song-card-vertical-artist-name">Metallica</div>
                                       </a>
                                     </div>
@@ -122,7 +122,7 @@ function createSingelCardForShowsToTrySection() {
   );
 
   showsToTrySection.innerHTML += `<div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3 mx-sm-auto mx-md-auto">
-                                    <a class="artist-link card-link" href="./artistPage.html">
+                                    <a class="artist-link card-link" href="./artistpage.html">
                                       <div class="artist-card-vertical">
                                         <div class="position-relative">
                                           <img
@@ -277,7 +277,7 @@ function addApiDataForShowsToTrySectionCard(objectArtistFetched, card) {
   cardImage.src = artistKeyOfObjectArtistFetched.picture_medium;
   cardSongName.innerText = objectArtistFetched.title;
   cardArtistName.innerText = artistName;
-  card.href = `./artistPage.html?artistName=${artistName}&artistId=${artistId}`;
+  card.href = `./artistpage.html?artistName=${artistName}&artistId=${artistId}`;
 }
 
 function addApiDataForOneCard(objectArtistFetched, card) {
@@ -291,5 +291,5 @@ function addApiDataForOneCard(objectArtistFetched, card) {
   cardImage.src = artistKeyOfObjectArtistFetched.picture_medium;
   cardSongName.innerText = objectArtistFetched.title;
   cardArtistName.innerText = artistName;
-  cardArtistLink.href = `./artistPage.html?artistName=${artistName}&artistId=${artistId}`;
+  cardArtistLink.href = `./artistpage.html?artistName=${artistName}&artistId=${artistId}`;
 }
